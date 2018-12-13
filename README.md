@@ -44,12 +44,12 @@ Currently, only XT is supported:
 ![alt text](http://www.classiccmp.org/cpmarchives/cpm/mirrors/www.s100computers.com/My%20System%20Pages/IBM%20Keyboard/Sockets-AT.jpg)
 
 
-Note: DOUBLE CHECK! Bad wiring is baaaad!
-Teensy ------ Keyboard
-Vin ---------- Vcc +5v
-PD2 --------- Clock
-PD3 --------- Data
-GND -------- GND
+Note: DOUBLE CHECK! Bad wiring is baaaad!  
+Teensy ------ Keyboard  
+Vin ---------- Vcc +5v  
+PD2 --------- Clock  
+PD3 --------- Data  
+GND -------- GND  
 
 Note: I'm trying to keep TX and RX open for development purposes.
 
