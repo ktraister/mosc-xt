@@ -10,28 +10,28 @@ This is a copy of the source code posted on the [Desktority forum](https://deskt
 Designed for the PJRC Teensy 3.1  
 
 Keyboards currently supported:
-   -IBM Model F "XT" (83 key) [verified]
-   -Other XT-set 1 keyboards
+   -IBM Model F "XT" (83 key) [verified]  
+   -Other XT-set 1 keyboards  
 
 Microcontrollers currently supported:
-   -Teensy 3.2
-   -Teensy 3.1 [verified]
-   -Teensy 3.0
-   -Teensy++ 2.0
-   -Teensy 2.0
+   -Teensy 3.2  
+   -Teensy 3.1 [verified]  
+   -Teensy 3.0  
+   -Teensy++ 2.0  
+   -Teensy 2.0  
 
 Features:
-   -6 Key rollover minimum (10 max)
-   -Dual-layered function keys (toggle with NumLock)
-   -Bypassing of keyboard's built-in key repeat
-   -Porting to other Arduino boards is not too difficult
+   -6 Key rollover minimum (10 max)  
+   -Dual-layered function keys (toggle with NumLock)  
+   -Bypassing of keyboard's built-in key repeat  
+   -Porting to other Arduino boards is not too difficult  
 
 Known issues:
-   -If you hold down both shift keys and then release them, shift stays on until you press and release it again.
-   -Both shift keys map to left shift.
+   -If you hold down both shift keys and then release them, shift stays on until you press and release it again.  
+   -Both shift keys map to left shift.  
 
 Version 0.1 - 01/11/2016
-   -(initial release) 
+   -(initial release)   
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
