@@ -40,7 +40,9 @@ Setup
 Choose either the MAIN or ALTERNATE builds. Main is standard key layout, alternate swaps the control and alt keys to better resemble modern keyboards.
 
 Currently, only XT is supported:
-![alt text] (http://www.classiccmp.org/cpmarchives/cpm/mirrors/www.s100computers.com/My%20System%20Pages/IBM%20Keyboard/Sockets-AT.jpg)
+
+![alt text](http://www.classiccmp.org/cpmarchives/cpm/mirrors/www.s100computers.com/My%20System%20Pages/IBM%20Keyboard/Sockets-AT.jpg)
+
 
 Note: DOUBLE CHECK! Bad wiring is baaaad!
 Teensy ------ Keyboard
@@ -54,7 +56,9 @@ Note: I'm trying to keep TX and RX open for development purposes.
 Set up Teensyduino so you know how to compile and upload to controller.
 Follow these settings in the Arduino IDE:
 (Make sure you set the board to YOUR version of Teensy)
+
 ![alt text](http://i.imgur.com/gTmYFb8.png)
+
 
 Finally, load up the .ino and then simply upload to the board if you have a Teensy 3.1.
 If you have a Teensy 2.0 or 2.0++, change LED_Pin in the sketch to 11 or 6, respectively.
