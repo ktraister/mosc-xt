@@ -37,7 +37,7 @@ Version 0.1 - 01/11/2016
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Setup
-Choose from the MAIN or ALTERNATE builds. Main is standard key layout, alternate swaps the control and alt keys, while alternate2 changes ['CTRL->CAPS_LCK', 'ALT->CTRL', 'CAPS_LCK->ALT', '~<->\'] to better resemble modern keyboards.
+Choose from the MAIN or ALTERNATE builds. Main is standard key layout, alternate swaps the control and alt keys, while alternate2 changes ['CTRL->CAPS_LCK', 'ALT->CTRL', 'CAPS_LCK->ALT', '~<->\\'] to better resemble modern keyboards.
 
 Currently, only XT is supported:
 
