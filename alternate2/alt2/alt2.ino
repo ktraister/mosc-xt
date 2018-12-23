@@ -28,8 +28,8 @@
  
  
 // I/O pins used
-const int CLK_Pin = 2;       // Feel free to make this any unused digital pin (must be 5v tolerant!)
-const int DATA_Pin = 3;      // Feel free to make this any unused digital pin (must be 5v tolerant!)
+const int CLK_Pin = 3;       // Feel free to make this any unused digital pin (must be 5v tolerant!)
+const int DATA_Pin = 2;      // Feel free to make this any unused digital pin (must be 5v tolerant!)
 const int LED_Pin = 13;      // the number of the LED pin (for NumLock)
 
 
@@ -739,7 +739,7 @@ void loop() {
   if (numBits == 9) {
     if (scanCode != lastScanCode) {
       handleKeyEvent(scanCode);    // Disable this line and enable the following line
-//    Keyboard.println(scanCode);  // to determine scan codes for larger keyboards
+      //Keyboard.println(scanCode);  // to determine scan codes for larger keyboards
 
       lastScanCode = scanCode;     // This is the magic that prevents key repeating.
     }
@@ -757,7 +757,6 @@ void loop() {
     // On each rising edge, get the respective DATA.
     // cycleReadYet prevents multiple reads on the same cycle.
     if (digitalRead(CLK_Pin) == 1 && cycleReadYet == 0) {
-      
       // The first clock pulse signals the start of a scan code.
       // This means it has no relevant data.
       if (sigStart == 0){
