@@ -300,7 +300,7 @@ void handleKeyEvent(int value) {
         setOpenKey(KEY_ENTER);              // technically KEYPAD_ENTER
         break;
       case 29:
-        modKeyPress(KEY_CAPS_LOCK);          // Model F CONTROL KEY IS IN STRANGE SPOT
+        setOpenKey(KEY_CAPS_LOCK);          // Model F CONTROL KEY IS IN STRANGE SPOT
         break;
       case 30:
         setOpenKey(KEY_A);
@@ -387,7 +387,7 @@ void handleKeyEvent(int value) {
         setOpenKey(KEY_SPACE);
         break;
       case 58:
-        setOpenKey(MODIFIERKEY_ALT);
+        modKeyPress(MODIFIERKEY_ALT);
         break;
       case 59:
         pressKey(KEY_F1);                        // F* Keys are handled under NumLock. Numlock off = 1-10. When on, F9=F11, F10=F12
@@ -552,7 +552,7 @@ void handleKeyEvent(int value) {
         clearKey(KEY_ENTER);              // This is technically KEYPAD_ENTER
         break;
       case 157:
-        modKeyRel(KEY_CAPS_LOCK);          // Model F CONTROL KEY IS IN STRANGE SPOT
+        clearKey(KEY_CAPS_LOCK);          // Model F CONTROL KEY IS IN STRANGE SPOT
         break;
       case 158:
         clearKey(KEY_A);
@@ -639,7 +639,7 @@ void handleKeyEvent(int value) {
         clearKey(KEY_SPACE);
         break;
       case 186:
-        clearKey(MODIFIERKEY_ALT);
+        modKeyRel(MODIFIERKEY_ALT);
         break;
       case 187:
         releaseKey(KEY_F1);                        // F* Keys are handled under NumLock. Numlock off = 1-10. When on, F9=F11, F10=F12
