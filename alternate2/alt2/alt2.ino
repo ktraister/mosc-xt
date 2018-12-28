@@ -28,8 +28,8 @@
  
  
 // I/O pins used
-const int CLK_Pin = 2;       // Feel free to make this any unused digital pin (must be 5v tolerant!)
-const int DATA_Pin = 3;      // Feel free to make this any unused digital pin (must be 5v tolerant!)
+const int CLK_Pin = 3;       // Feel free to make this any unused digital pin (must be 5v tolerant!)
+const int DATA_Pin = 2;      // Feel free to make this any unused digital pin (must be 5v tolerant!)
 const int LED_Pin = 13;      // the number of the LED pin (for NumLock)
 
 
@@ -300,7 +300,7 @@ void handleKeyEvent(int value) {
         setOpenKey(KEY_ENTER);              // technically KEYPAD_ENTER
         break;
       case 29:
-        modKeyPress(KEY_CAPS_LOCK);          // Model F CONTROL KEY IS IN STRANGE SPOT
+        setOpenKey(KEY_CAPS_LOCK);          // Model F CONTROL KEY IS IN STRANGE SPOT
         break;
       case 30:
         setOpenKey(KEY_A);
@@ -387,7 +387,7 @@ void handleKeyEvent(int value) {
         setOpenKey(KEY_SPACE);
         break;
       case 58:
-        setOpenKey(MODIFIERKEY_ALT);
+        modKeyPress(MODIFIERKEY_ALT);
         break;
       case 59:
         pressKey(KEY_F1);                        // F* Keys are handled under NumLock. Numlock off = 1-10. When on, F9=F11, F10=F12
@@ -552,7 +552,7 @@ void handleKeyEvent(int value) {
         clearKey(KEY_ENTER);              // This is technically KEYPAD_ENTER
         break;
       case 157:
-        modKeyRel(KEY_CAPS_LOCK);          // Model F CONTROL KEY IS IN STRANGE SPOT
+        clearKey(KEY_CAPS_LOCK);          // Model F CONTROL KEY IS IN STRANGE SPOT
         break;
       case 158:
         clearKey(KEY_A);
@@ -639,7 +639,7 @@ void handleKeyEvent(int value) {
         clearKey(KEY_SPACE);
         break;
       case 186:
-        clearKey(MODIFIERKEY_ALT);
+        modKeyRel(MODIFIERKEY_ALT);
         break;
       case 187:
         releaseKey(KEY_F1);                        // F* Keys are handled under NumLock. Numlock off = 1-10. When on, F9=F11, F10=F12
@@ -739,7 +739,7 @@ void loop() {
   if (numBits == 9) {
     if (scanCode != lastScanCode) {
       handleKeyEvent(scanCode);    // Disable this line and enable the following line
-//    Keyboard.println(scanCode);  // to determine scan codes for larger keyboards
+      //Keyboard.println(scanCode);  // to determine scan codes for larger keyboards
 
       lastScanCode = scanCode;     // This is the magic that prevents key repeating.
     }
@@ -757,7 +757,6 @@ void loop() {
     // On each rising edge, get the respective DATA.
     // cycleReadYet prevents multiple reads on the same cycle.
     if (digitalRead(CLK_Pin) == 1 && cycleReadYet == 0) {
-      
       // The first clock pulse signals the start of a scan code.
       // This means it has no relevant data.
       if (sigStart == 0){

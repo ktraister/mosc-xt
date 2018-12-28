@@ -28,9 +28,9 @@
  
  
 // I/O pins used
-const int CLK_Pin = 2;       // Feel free to make this any unused digital pin (must be 5v tolerant!)
-const int DATA_Pin = 3;      // Feel free to make this any unused digital pin (must be 5v tolerant!)
-const int LED_Pin = 13;      // the number of the LED pin (for NumLock)
+const int CLK_Pin = 3;       // Feel free to make this any unused digital pin (must be 5v tolerant!)
+const int DATA_Pin = 2;      // Feel free to make this any unused digital pin (must be 5v tolerant!)
+const int LED_Pin = 13;    // the number of the LED pin (for NumLock)
 
 
 // Array tracks keys currently being held
@@ -725,14 +725,14 @@ void handleKeyEvent(int value) {
 }
 
 
-void loop() {
+void loop(){
   // This catches a LOW in clock, signaling the start of a scan code 
   if (readCode == 0 && digitalRead(CLK_Pin) == 0) {
     readCode = 1;
   }
   
   // Note how numbits must be 9 instead of 8.
-  // If we ignore the 9th pulse, it re-triggers readCode,
+  // If we ignore the 9th pulse, it re-triggers readCode,g
   // causing invalid scancodes.
   // The the 9th value should always be 0, so it 
   // shouldn't change the scan code.
@@ -742,6 +742,7 @@ void loop() {
 //    Keyboard.println(scanCode);  // to determine scan codes for larger keyboards
 
       lastScanCode = scanCode;     // This is the magic that prevents key repeating.
+      Keyboard.println(F(scanCode));
     }
     // Reset all after successfully sending scanCode.
     sigStart = 0;
