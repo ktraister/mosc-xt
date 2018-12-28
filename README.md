@@ -13,8 +13,8 @@ Keyboards currently supported:
    -IBM Model F "XT" (83 key) [verified]  
    -Other XT-set 1 keyboards  
 
-Microcontrollers currently supported:
-   -Teensy 3.2  
+Microcontrollers currently supported:  
+   -Teensy 3.2 [verified]  
    -Teensy 3.1 [verified]  
    -Teensy 3.0  
    -Teensy++ 2.0  
