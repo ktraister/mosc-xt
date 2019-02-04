@@ -9,7 +9,7 @@ This is a copy of the source code posted on the [Desktority forum](https://deskt
 
 Designed for the PJRC Teensy 3.1  
 
-Keyboards currently supported:
+Keyboards currently supported:  
    -IBM Model F "XT" (83 key) [verified]  
    -Other XT-set 1 keyboards  
 
